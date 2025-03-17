@@ -1,0 +1,270 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  font-family: 'Archivo', sans-serif; --font-sans: 'Archivo';
+}
+
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html.light body{
+  background-color: #F7F9FC !important;
+}
+
+.loader-anim{
+  opacity: 0;
+  animation: loader ease-out 1.5s forwards 1s;
+  -webkit-animation: loader ease-out 1.5s forwards 1s;
+}
+
+.linearImage{
+  background: linear-gradient(90deg, #3C58E3 -15%, #C2EBFF 58%, #5AB5E2 97%);
+}
+.marqee_para{
+  animation: carousel-para 10s linear infinite;
+  -webkit-animation: carousel-para 10s linear infinite;
+}
+
+@keyframes carousel-para{
+  0% {transform: translateX(0px);}
+  100% { transform: translateX(-244px); -webkit-transform: translateX(-244px); -moz-transform: translateX(-244px); -ms-transform: translateX(-244px); -o-transform: translateX(-244px); }
+}
+
+@keyframes loader{
+  0% {opacity: 1;visibility: visible;}
+  90% {opacity: 1;visibility: visible;}
+  100% {opacity: 0;visibility: hidden;}
+}
+
+.FloatingElement{
+  opacity: 1;
+  visibility: visible;
+  animation: FloatingElement ease-out 1.5s forwards;
+  -webkit-animation: FloatingElement ease-out 1.5s forwards;
+}
+
+@keyframes FloatingElement{
+  0% {top: -100%;}
+  40% {top: 0%;}
+  60% {top: 0%;}
+  100% {top: 100%;}
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: auto; 
+  /* Adjust the transparency as needed */
+ /* Ensure it's above other content */
+ z-index: 10;
+  
+}
+.fl{
+  width: 33%;
+}
+.bl{
+  width: 33%;
+}
+@media screen and (max-width:1025px){
+  .fl{
+    width: 35%;
+  }
+  .bl{
+    width: 45%;
+  }
+}
+@media screen and (max-width:769px){
+ 
+  .bl{
+    width: 48%;
+  }
+}
+@media screen and (max-width:426px){
+  .fl{
+    width: 50%;
+  }
+  .bl{
+    width: 100%;
+  }
+  
+}
+@media screen and (max-width:376px){
+  .fl{
+    width: 80%;
+    margin: auto;
+  }
+  .bl{
+    width: 100%;
+  }
+  
+}
+.ch{
+  height: 600px;
+  width: 80%;
+}
+@media screen and (max-width:1025px){
+  .ch{
+    height: 550px;
+    width: 90%;
+
+
+  }
+  
+}
+@media screen and (max-width:769px){
+  .ch{
+    height: 500px;
+    width: 90%;
+
+
+  }
+  
+}
+@media screen and (max-width:427px){
+  .ch{
+    height: 300px;
+    width: 90%;
+
+
+  }
+  
+}
+@media screen and (max-width:376px){
+  .ch{
+    height: 250px;
+    width: 90%;
+
+
+  }
+  
+}
+@media screen and (max-width:321px){
+  .ch{
+    height: 270px;
+    width: 95%;
+
+
+  }
+  
+}
+.sidebar-content {
+  pointer-events: auto; /* Allow mouse events on the sidebar content */
+  /* Your other styles for the sidebar content */
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+@media screen and (max-width:325px){
+  .sm{
+    margin-top: 20px
+  }
+
+  
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* overflow: hidden; */
+  }
+}
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 10px;
+
+}
+.hma{
+  height: 600px;
+}
+.mn:hover{
+  border:2px solid rgb(62, 62, 213)
+
+}
+@media screen and (max-width:718px){
+  .hma{
+    height: 300px;
+  }
+  
+}
+
+/* This will style the thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #9f9e9e; /* Change the color of the scrollbar thumb */
+  border-radius: 20px; /* Change the border radius of the scrollbar thumb */
+}
+
+/* This will style the track (the area behind the thumb) */
+::-webkit-scrollbar-track {
+  background-color: #d4d2d2;
+   /* Change the color of the scrollbar track */
+}
